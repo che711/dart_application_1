@@ -1,3 +1,5 @@
+late int tweets;
+
 void main() {
   var number = 10;
   print(number);
@@ -7,4 +9,7 @@ void main() {
   int like;
   like = 324;
   print(like);
+
+  tweets = 100;
+  print(tweets);
 }
