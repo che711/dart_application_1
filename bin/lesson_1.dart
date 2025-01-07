@@ -20,8 +20,18 @@ void main() {
   int? comment; // не требуют инициализации перед доступом
   print(comment);
 
-  print('test msg');
+  print('Checking nulable variable:');
 
   String? test_var;
   print(test_var);
+
+  // naming in Dart:
+  // personAge.
+  // numberOfPeople;
+  // gradePointAverage;
+
+  print('Checking nullable variable with bool type:');
+
+  bool? varBool;
+  print(varBool);
 }
