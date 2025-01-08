@@ -21,17 +21,16 @@ void main() {
   print(comment);
 
   print('Checking nulable variable:');
-
   String? test_var;
   print(test_var);
 
-  // naming in Dart:
-  // personAge.
-  // numberOfPeople;
-  // gradePointAverage;
+  /* naming in Dart - нижний camelCase (начинаем с маленькой буквы и 
+   каждое следующее новое слово с большой):
+   personAge.
+   numberOfPeople;
+   gradePointAverage; */
 
   print('Checking nullable variable with bool type:');
-
   bool? varBool;
   print(varBool);
 }
