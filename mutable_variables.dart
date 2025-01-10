@@ -3,5 +3,5 @@ void main() {
   print(meYearOfBirth);
 
   meYearOfBirth = 1988;
-  print(meYearOfBirth)
+  print(meYearOfBirth);
 }
