@@ -21,8 +21,8 @@ void main() {
   print(comment);
 
   print('Checking nulable variable:');
-  String? test_var;
-  print(test_var);
+  String? testVar;
+  print(testVar);
 
   /* naming in Dart - нижний camelCase (начинаем с маленькой буквы и 
    каждое следующее новое слово с большой):
