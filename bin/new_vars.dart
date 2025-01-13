@@ -1,4 +1,3 @@
-
 void main() {
   print(''); // Пустая строка
   // Numbers (num -> int (целые числи) и double (числа с плавающей точкой))
@@ -13,19 +12,24 @@ void main() {
 
   // String используется кодировка UTF-16 и это единственный тип который пошется с заглавной буквы
   String myString = 'Hello, Dart!';
-  String myName = "Andrew";
+  String myName = "andrew";
   String question = 'What\'s your name?'; // Экранирование символов через \
   String myFullName = 'Andrew' + ' ' + 'Che'; // Конкатенация строк
   String myFio = '''
-  Andrew
+  andrew
   Che
   '''; // Многострочная строка
+  String personInfo =
+      'I\'m ${myName.toUpperCase()} and my full name $myFio'; // Интерполяция строк
 
   print(myName);
   print(myString);
   print(question);
   print(myFullName);
   print(myFio);
+  print(personInfo);
+  print(
+      'Первый элемент строки: ${personInfo[0]}'); // Обращение к символу по индексу
   print(''); // Пустая строка
 
   // Boolean
@@ -34,6 +38,8 @@ void main() {
 
   print('a: $a, b: $b');
 
+  // Rune
+  
   //Symmbol
 
   // Null
