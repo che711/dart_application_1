@@ -37,9 +37,17 @@ void main() {
   var b = false;
 
   print('a: $a, b: $b');
+  print(''); // Пустая строка
+  // Rune - последовательность символов UTF-32.
+  // выдает уникальное числовое значение для каждого символа
+  Runes hello = Runes('Hello, Dart!');
+  // \uXXXX - где XXXX - это код символа в шестнадцатеричной системе
+  var input = Runes('\u2665 \u{1f600}');
 
-  // Rune
-  
+  print(String.fromCharCodes(input));
+  print(hello);
+  print(''); // Пустая строка
+
   //Symmbol
 
   // Null
