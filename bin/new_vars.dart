@@ -49,8 +49,11 @@ void main() {
   print(''); // Пустая строка
 
   //Symmbol
+  var mySymbol = #myApi;
 
+  print(mySymbol);
+  print('');
   // Null
 
-  //List, Set, Map
+  // List, Set, Map
 }
