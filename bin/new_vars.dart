@@ -54,8 +54,15 @@ void main() {
 
   print(mySymbol);
   print('');
-  // Null
+  // Null.
+  /* Dart - типобезопастный язык. Он гарантируе что переменная не будет null
+  если не указано иное. */
+
+  int age;
+  age = 4;
+
   
+  print(age);
 
   // List, Set, Map
 }
