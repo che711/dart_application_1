@@ -61,8 +61,11 @@ void main() {
   int age;
   age = 4;
 
-  
+  int? age2;
+  age2 = null;
+
   print(age);
+  print(age2);
 
   // List, Set, Map
 }
