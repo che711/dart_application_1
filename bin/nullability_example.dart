@@ -7,10 +7,15 @@ void main() {
 
   String name = 'Test_Andrey';
   print(name.toUpperCase());
+  print('');
 
-  String? name2;  // String? - nullable переменная (String? -> String)
-  // name2 = 'andrew';  // Flow Ananlysis. Type promotion/
-  
+  String? name2; // String? - nullable переменная (String? -> String)
+
+  // Flow Ananlysis. Type promotion:
+  // name2 = 'andrew';
+
   if (name2 == null) return print('Unknown name');
   print(name2.toUpperCase());
+
+  // name2 = null;
 }
