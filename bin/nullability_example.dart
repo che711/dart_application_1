@@ -18,4 +18,7 @@ void main() {
   print(name2.toUpperCase());
 
   // name2 = null;
+  int age;
+  age = 18;
+
 }
