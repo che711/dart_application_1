@@ -25,15 +25,27 @@ void main() {
     result = 'Good Afternoon';
   }
   print(result);
-  
+
   print('');
-  print('Блок кода с операторами ?? и ??= :');
+  print('Блок кода с операторами ?? ??= ?. :');
 
   //null-aware operator. ?? - называется if-null operator
   String? name3;
-  name3 = 'not_null';
+  // name3 = 'not_null';
   print(name3 ?? 'Unknown name');
 
+  // ?. - null-aware access operator - если переменная null, то просто выводится null
+  print(name3?.toUpperCase());
+  print(name3?.length ?? 0);
+
   //  ??= - это null-aware assignment operator
-  print(name3 ??= 'test_msg');
+  print(name3 ??= 'test_msg');  // если name3 null, то присваивается значение 'test_msg'
+
+  // ! - null-assertion operator
+  // print(name3!.toUpperCase());
+
+  // as - casting
+  num? value = 10;
+  print(value as int);
+  
 }
