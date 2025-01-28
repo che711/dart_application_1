@@ -12,10 +12,40 @@ void main() {
   String? name2; // String? - nullable переменная (String? -> String)
 
   // Flow Ananlysis. Type promotion:
-  // name2 = 'andrew';
+  name2 = 'andrew';
 
   if (name2 == null) return print('Unknown name');
   print(name2.toUpperCase());
 
-  // name2 = null;
+  // Flow analisys: Definite Assignment
+  String result;
+  if (DateTime.now().hour < 12) {
+    result = 'Good Morning';
+  } else {
+    result = 'Good Afternoon';
+  }
+  print(result);
+
+  print('');
+  print('Блок кода с операторами ?? ??= ?. :');
+
+  //null-aware operator. ?? - называется if-null operator
+  String? name3;
+  // name3 = 'not_null';
+  print(name3 ?? 'Unknown name');
+
+  // ?. - null-aware access operator - если переменная null, то просто выводится null
+  print(name3?.toUpperCase());
+  print(name3?.length ?? 0);
+
+  //  ??= - это null-aware assignment operator
+  print(name3 ??= 'test_msg');  // если name3 null, то присваивается значение 'test_msg'
+
+  // ! - null-assertion operator
+  // print(name3!.toUpperCase());
+
+  // as - casting
+  num? value = 10;
+  print(value as int);
+  
 }
