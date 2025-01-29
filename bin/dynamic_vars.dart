@@ -6,6 +6,4 @@ void main() {
   Object? myVariable = 10;
   myVariable = 'World';
   print(myVariable);
-
-
 }
