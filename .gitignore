@@ -5,3 +5,7 @@
 
 # condventional directory for build output
 buil
+
+# directories
+.vcscode/*
+
