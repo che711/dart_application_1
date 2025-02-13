@@ -1,26 +1,38 @@
 void main() {
   // create a list
   // все в квадратных скобках литералом списка:
-  var fruits = ['apples', 'oranges', 'bananas', 'watermelon']; 
-  print(fruits);
-  print('');
+  var fruits = ['apples', 'oranges', 'bananas', 'watermelon' ]; 
 
-  print(fruits.first);
-  print('');
+  // тоже самое, но с использованием цикла for-in:
+  for(int i=0; i<fruits.length; i++){
+    final fruit = fruits[i];
+    print('I like $fruit');
+  }
 
-  print(fruits.last);
-  print('');
+  // тоже самое, но с использованием цикла for:
+  for(final fruit in fruits){
+    print('I like $fruit');
+  }
 
-  print(fruits[0]);
-  print('');
+  // print(fruits);
+  // print('');
 
-  print('print(fruits.length - 1):');
-  print(fruits.length - 1);
-  print('');
+  // print(fruits.first);
+  // print('');
 
-  print(fruits.isEmpty);
-  print('');
+  // print(fruits.last);
+  // print('');
 
-  print(fruits.isNotEmpty);
-  print('');
+  // print(fruits[0]);
+  // print('');
+
+  // print('print(fruits.length - 1):');
+  // print(fruits.length - 1);
+  // print('');
+
+  // print(fruits.isEmpty);
+  // print('');
+
+  // print(fruits.isNotEmpty);
+  // print('');
 }
