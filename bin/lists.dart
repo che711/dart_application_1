@@ -3,13 +3,13 @@ void main() {
   // все в квадратных скобках литералом списка:
   var fruits = ['apples', 'oranges', 'bananas', 'watermelon' ]; 
 
-  // тоже самое, но с использованием цикла for-in:
+  // тоже самое, что и с использованием цикла for-in:
   for(int i=0; i<fruits.length; i++){
     final fruit = fruits[i];
     print('I like $fruit');
   }
 
-  // тоже самое, но с использованием цикла for:
+  // тоже самое, чтог и с использованием цикла for:
   for(final fruit in fruits){
     print('I like $fruit');
   }
