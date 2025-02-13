@@ -1,6 +1,7 @@
 void main() {
   // create a list
-  var fruits = ['apples', 'oranges', 'bananas', 'watermelon']; // все в квадратных скобках литералом списка
+  // все в квадратных скобках литералом списка:
+  var fruits = ['apples', 'oranges', 'bananas', 'watermelon']; 
   print(fruits);
   print('');
 
@@ -12,14 +13,14 @@ void main() {
 
   print(fruits[0]);
   print('');
-  
-  print(fruits.length -1);
 
+  print('print(fruits.length - 1):');
+  print(fruits.length - 1);
   print('');
 
+  print(fruits.isEmpty);
   print('');
+
+  print(fruits.isNotEmpty);
   print('');
-
-
-
 }
