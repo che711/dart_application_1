@@ -24,5 +24,4 @@ void main() {
   // double -> String
   String s3 = 3.14159.toStringAsFixed(2);
   print(s3);
-  
 }

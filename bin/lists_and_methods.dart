@@ -1,17 +1,11 @@
 void main() {
   // create a lis
-  var fruits = [
-    'apples',
-    'oranges',
-    'bananas',
-    'watermelon'
-  ]; // все в квадратных скобках литералом списка
+  var fruits = ['apples', 'oranges', 'bananas', 'watermelon']; // все в квадратных скобках литералом списка
   fruits = [];
   fruits = ['orange', 'pears', 'coconaut', 'melon'];
   print(fruits);
 
-  var owoce =
-      []; // при создании пустого списка dart думает что это список динамического типа
+  var owoce = []; // при создании пустого списка dart думает что это список динамического типа
   List<String> apple = ['watermelon', 'grape', 'cherr']; // указываем тип списка
   var orange = <String>[]; // указываем тип списка
 
@@ -44,20 +38,20 @@ void main() {
   print(fruits);
 
   fruits.removeAt(2); // удаляет элемент по индексу
-  print(fruits);
+  // print(fruits);
   print('');
 
-  // sorting elements
-  final numbers = [22, 83, 42, 24, 85, 3]; // сортировка чисел
-  numbers.sort();
-  print(numbers);
+  // // sorting elements
+  // final numbers = [22, 83, 42, 24, 85, 3]; // сортировка чисел
+  // numbers.sort();
+  // print(numbers);
 
-  final minValues = numbers[0];
-  final maxValues = numbers[numbers.length - 1];
-  print('Минимальное значение: $minValues');
-  print('Максимальное значение: $maxValues');
-  print('');
+  // final minValues = numbers[0];
+  // final maxValues = numbers[numbers.length - 1];
+  // print('Минимальное значение: $minValues');
+  // print('Максимальное значение: $maxValues');
+  // print('');
 
-  fruits.sort(); // сортировка строк. по дефолту сортирует по алфавиту
-  print(fruits);
+  // fruits.sort(); // сортировка строк. по дефолту сортирует по алфавиту
+  // print(fruits);
 }
