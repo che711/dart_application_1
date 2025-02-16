@@ -1,11 +1,10 @@
 void main() {
   // проверка на четность\нечетность числа
   num someNumber = 5;
-  print(
-      someNumber); // тут мы не можем вызвать .isEven, т.к. someNumber имеет тип num
+  print(someNumber); 
 
   final someInt = someNumber as int;
-  print(someNumber.isEven); // а теперь можем, т.к. someNumber имеет тип int
+  print(someInt.isEven); // теперь можем вызвать .isEven, т.к. someInt имеет тип int
 
   // перевод строки в число Styring -> int
   var myInt = int.parse('8');
