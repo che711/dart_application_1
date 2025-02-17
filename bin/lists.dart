@@ -1,7 +1,12 @@
 void main() {
   // create a list
   // все в квадратных скобках называется литералом списка:
-  var fruits = ['apples', 'oranges', 'bananas', 'watermelon'];
+  var fruits = [
+    'apples', 
+    'oranges', 
+    'bananas', 
+    'watermelon',
+    ];
 
   // тоже самое, что и с использованием цикла for-in:
   print('without for-in cycle:');
