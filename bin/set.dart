@@ -19,7 +19,8 @@ void main() {
   // intersection() - пересечение множеств
   // set - может быть быстрее чем list, когда надо проверить наличие элемента в коллекции
 
-  // coдаем Set
+  // coздаем Set
+  
   // final Set<int> setOne = {};
   final setTwo = <int>{};
   final setThree = {1, 2, 3, 4, 5};
