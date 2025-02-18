@@ -20,5 +20,12 @@ void main() {
   // set - может быть быстрее чем list, когда надо проверить наличие элемента в коллекции
 
   // coдаем Set
-  final Set<int> setOne = {};
+  // final Set<int> setOne = {};
+  final setTwo = <int>{};
+  final setThree = {1, 2, 3, 4, 5};
+
+  // print(setOne);
+  print(setTwo);
+  print(setThree);
+  
 }
