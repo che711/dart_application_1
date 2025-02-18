@@ -31,4 +31,9 @@ void main() {
 
   var setFour = Set.from([1, "hello", true]);
   print(setFour);
+
+  // сhecking the contains element
+  final fruits = {'apple', 'orange', 'banana', 'watermelon', 'pineapple'};
+  print(fruits.contains('apple'));
+  print(fruits.contains('mango'));
 }
