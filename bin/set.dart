@@ -29,11 +29,21 @@ void main() {
   print(setTwo);
   print(setThree);
 
-  var setFour = Set.from([1, "hello", true]);
+  var setFour = {1, "hello", true};
   print(setFour);
 
   // сhecking the contains element
   final fruits = {'apple', 'orange', 'banana', 'watermelon', 'pineapple'};
   print(fruits.contains('apple'));
   print(fruits.contains('mango'));
+
+  // adding and removing single elements
+  
+  // adding multiple elements
+
+  // looping over the elements
+  
+  // coping Sets
+
+  // other operations
 }
