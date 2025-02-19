@@ -21,7 +21,7 @@ void main() {
 
   // coздаем Set
 
-  final Set<int> setOne ={};
+  final Set<int> setOne = {};
   final setTwo = <int>{};
   final setThree = {1, 2, 3, 4, 5};
 
@@ -36,14 +36,46 @@ void main() {
   final fruits = {'apple', 'orange', 'banana', 'watermelon', 'pineapple'};
   print(fruits.contains('apple'));
   print(fruits.contains('mango'));
+  print('');
 
   // adding and removing single elements
-  
+  final newFruits = <String>{};
+  newFruits.add('orange');
+  newFruits.add('pear');
+  newFruits.add('orange');
+
+  print(newFruits);
+  print('');
+
+  newFruits.remove('orange');
+  print('Removed orange value from newFruits: $newFruits');
+  print('');
+
   // adding multiple elements
+  newFruits.addAll({'apple', 'banana', 'kiwi', 'pear', 'watermelon'});
+  print(newFruits);
+  print('');
 
   // looping over the elements
-  
+  for (var fruit in fruits) {
+    print("I'm like $fruit");
+  }
+  print('');
+
   // coping Sets
+  final freshFruits = fruits.toSet();
+  print(freshFruits);
+  freshFruits.remove('banana');
+  print('Removed mango value from freshFruits: $freshFruits');
+  print('');
+
+  print('newFruits: $fruits');
 
   // other operations
+
+  // intersection
+
+  // union
+
+  // difference
 }
