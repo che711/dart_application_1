@@ -1,3 +1,5 @@
+import 'dart:math'; 
+
 void main() {
   // set - множество. тип данных, который хранит только уникальные элементы.
   // повоторяющиеся элементы удаляются и порядок элементов не гарантируется.
@@ -70,8 +72,17 @@ void main() {
   print('');
 
   print('newFruits: $fruits');
+  print('');
 
   // other operations
+  var newFruits2 = {'apple', ...freshFruits, if (true) ...fruits};
+  print('newFruits2 $newFruits2');
+
+  final randomGenerator = Random();
+  final randomList = <int>[];
+
+  print('');
+
 
   // intersection
 
