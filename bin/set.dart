@@ -110,7 +110,9 @@ void main() {
   print('Union: $union');
   print('');
   // difference - разность множеств
-  final difference = setA.difference(setB);
-  print('Difference: $difference');
+  final differenceA = setA.difference(setB);
+  print('DifferenceA: $differenceA');
+  final differenceB = setB.difference(setA);
+  print('DifferenceB: $differenceB');
   print('');
 }
