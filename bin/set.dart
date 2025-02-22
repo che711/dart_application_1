@@ -1,4 +1,4 @@
-import 'dart:math'; 
+import 'dart:math';
 
 void main() {
   // set - множество. тип данных, который хранит только уникальные элементы.
@@ -80,12 +80,37 @@ void main() {
 
   final randomGenerator = Random();
   final randomList = <int>[];
-
+  for (int i = 0; i < 10; i++) {
+    final randomInt = randomGenerator.nextInt(10);
+    randomList.add(randomInt);
+  }
+  print('RandomList: $randomList');
   print('');
 
-  // intersection
+  final uniqueValue = <int>{};
+  final duplicates = <int>{};
+  for (var number in randomList.toSet()) {
+    if (uniqueValue.contains(number)) {
+      duplicates.add(number);
+    }
+    uniqueValue.add(number);
+  }
+  print('Unique values: $uniqueValue');
+  print('Duplicates: $duplicates');
 
-  // union
-
-  // difference
+  print('');
+  // intersection - пересечение множеств
+  final setA = {1, 2, 3, 4, 5};
+  final setB = {3, 6, 5, 7};
+  final intersection = setA.intersection(setB);
+  print('Intersection: $intersection');
+  print('');
+  // union - объединение множеств
+  final union = setA.union(setB);
+  print('Union: $union');
+  print('');
+  // difference - разность множеств
+  final difference = setA.difference(setB);
+  print('Difference: $difference');
+  print('');
 }
