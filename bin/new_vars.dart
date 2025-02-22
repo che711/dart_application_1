@@ -14,7 +14,6 @@ void main() {
   String myString = 'Hello, Dart!';
   String myName = "andrew";
   String question = 'What\'s your name?'; // Экранирование символов через \
-  // ignore: prefer_adjacent_string_concatenation
   String myFullName = 'Andrew' ' ' + 'Che'; // Конкатенация строк
   String myFio = '''
   andrew
@@ -53,20 +52,19 @@ void main() {
   var mySymbol = #myApi;
 
   print(mySymbol);
-  print('');
-  // Null.
-  /* Dart - типобезопастный язык. Он гарантируе что переменная не будет null
-  если не указано иное. 
-  Рекомендуется часто делать провекрки на Null*/
+print('');
+// Null.
+/* Dart - типобезопастный язык. Он гарантируе что переменная не будет null
+если не указано иное. 
+Рекомендуется часто делать провекрки на Null*/
 
-  int age;
-  age = 4;
+int age;
+age = 4;
 
-  int? age2;  // указание на то что переменная может быть null
-  age2 = null;
+int? age2;  // указание на то что переменная может быть null
+age2 = null;
 
-  print(age);
-  print(age2);
-
+print(age);
+print(age2);
   // List, Set, Map
 }
