@@ -52,7 +52,17 @@ void main() {
   print(caloriesInFood.values);
 
   // checking for Key or Value Existing
-  print(caloriesInFood.containsKey('apple'));
+  print(caloriesInFood.containsKey('pear'));
+  print(caloriesInFood.containsValue(1));
 
+  // Looping over elements for a Map via forEach
+  for (var key in caloriesInFood.keys) {
+    print(caloriesInFood[key]);
+  }
+  print("");
 
+  // Looping over elements for a Map via entries
+  for (var entry in caloriesInFood.entries) {
+    print('${entry.key}: ${entry.value}');
+  }
 }
