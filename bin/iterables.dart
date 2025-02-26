@@ -18,6 +18,8 @@ void main() {
 
   final reversedList2 = mylist.reversed.toList();
   print(reversedList2);  // квадратные скобки - это тип List  
-  
 
+  // creage an Iterable
+  final myIterable = Iterable.generate(5, (index) => index * 2);
+  print(myIterable);
 }
