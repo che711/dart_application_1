@@ -11,15 +11,19 @@ void main() {
   }
 
   final reversedList = mylist.reversed;
-  print(reversedList);  // круглые скобки - это тип Iterable, а не List
+  print(reversedList); // круглые скобки - это тип Iterable, а не List
   // iterable - это коллекция, которая может быть перебрана и возвращает элементы по одному с
   // List - это коллекция, которая может быть перебрана и имеет индексы
-  
 
   final reversedList2 = mylist.reversed.toList();
-  print(reversedList2);  // квадратные скобки - это тип List  
+  print(reversedList2); // квадратные скобки - это тип List
 
   // creage an Iterable
   final myIterable = Iterable.generate(5, (index) => index * 2);
-  print(myIterable);
+  print("myIterable: $myIterable");
+
+  Iterable<String> myIterable2 = ['a', 'b', 'c', 'd'];
+  print(myIterable2);
+
+  
 }
