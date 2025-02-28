@@ -25,5 +25,7 @@ void main() {
   Iterable<String> myIterable2 = ['a', 'b', 'c', 'd'];
   print(myIterable2);
 
-  // 
+  // accessing elements
+  final twoElements = myIterable.elementAt(1);
+  print(twoElements);
 }
