@@ -1,3 +1,5 @@
+import 'package:dart_application_1/squares.dart';
+
 void main() {
   // a, b, c, d, e
   // 2, 4, 6, 16, 32
@@ -44,10 +46,14 @@ void main() {
     }
   }
 
-  final squares = hundredSquare();
+  // final squares = hundredSquare();
+  // for (int square in squares) {
+  //   print(square);
+  // }
+
+  final squares = HundredSquares();
   for (int square in squares) {
     print(square);
   }
 
-   
 }

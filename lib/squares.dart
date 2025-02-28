@@ -6,6 +6,11 @@ class SquaresIterator implements Iterator<int> {
 
   bool moveNext() {
     _index++;
-    return _index <=100;
+    return _index <= 100;
   }
+}
+
+class HundredSquares extends Iterable<int> {
+  @override
+  Iterator<int> get iterator => SquaresIterator();
 }
