@@ -26,6 +26,28 @@ void main() {
   print(myIterable2);
 
   // accessing elements
-  final twoElements = myIterable.elementAt(1);
-  print(twoElements);
+  final twoElements = myIterable2.elementAt(1);
+  print('twoElements: $twoElements');
+
+  // finding the first and last elements
+  print('First element: $myIterable2.first');
+  print('Last element: $myIterable2.last');
+
+  // Getting the length
+  var mylength = myIterable2.length;
+  print('myIterable2.length: $mylength');
+
+  // other important methods on Iterable: map, where,expan, contains,forEach, reduce, fold
+  Iterable<int> hundredSquare() sync* {
+    for (int i = 1; i < 100; i++) {
+      yield i * i;
+    }
+  }
+
+  final squares = hundredSquare();
+  for (int square in squares) {
+    print(square);
+  }
+
+   
 }
