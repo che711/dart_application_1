@@ -9,6 +9,13 @@ void main() {
 
   String myCircleArea = circleArea(5);
   print(myCircleArea);
+
+  String myPerson = person(
+    age: 37,
+    firstName: 'Andrew',
+    lastName: 'Che',
+  );
+  print(myPerson);
 }
 
 // Анатомия функции
@@ -26,9 +33,9 @@ String circleArea(int radius) {
 //             print('Hello, World');
 //           }
 //      - Функции с параметрами и без возвращаемого типа:
-//           void cube(int num) {  
+//           void cube(int num) {
 //            print(num * num * num);
-//          }  
+//          }
 //      - Функции без параметров, но с возвращаемым типом:
 //            int sum(){
 //             int a = 10, b = 20, c;
@@ -42,6 +49,24 @@ String circleArea(int radius) {
 //             return a;
 //          }
 
-  String person(String firstName, String lastName) {
+String person({
+  required String firstName,
+  String? lastName,
+  int? age,
+}) {
+// String person(String firstName, String lastName, [int? age=0]) {
+
+  if (age == null) {
     return 'Hello, $firstName $lastName';
   }
+  return 'Hello, $firstName $lastName, your age is $age';
+}
+
+
+//                обязательные    необязательные
+//              +---------------------+-----------------+
+// позиционные  |     f(int x)        |    f([int x])   | 
+//              +---------------------+-----------------+
+// именнованные | f({required int x}) |    f({int x})   | 
+//              +---------------------+-----------------+
+
