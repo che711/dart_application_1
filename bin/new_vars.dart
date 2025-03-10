@@ -14,7 +14,7 @@ void main() {
   String myString = 'Hello, Dart!';
   String myName = "andrew";
   String question = 'What\'s your name?'; // Экранирование символов через \
-  String myFullName = 'Andrew' ' ' + 'Che'; // Конкатенация строк
+  String myFullName = 'Andrew' ' ' 'Che'; // Конкатенация строк
   String myFio = '''
   andrew
   Che
