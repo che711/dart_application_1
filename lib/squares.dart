@@ -4,6 +4,7 @@ class SquaresIterator implements Iterator<int> {
   @override
   int get current => _index * _index;
 
+  @override
   bool moveNext() {
     _index++;
     return _index <= 100;
