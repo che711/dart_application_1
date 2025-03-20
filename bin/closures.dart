@@ -7,11 +7,18 @@ void main() {
   Function add = addNumbers(4);
   int result = add(3);
   print(result);  
+
+  int result2 = addNumbers(5)(6);
+  print(result2);
 }
 
 Function addNumbers(int x) { // Внешняя функция
-  int sum(int y) {  // Вложенная функция
-    return x + y;   // некторые действия
-  }
-  return sum; // возвращаем вложенную функцию
+  // int sum(int y) {  // Вложенная функция
+  //   return x + y;   // некторые действия
+  // }
+  // return sum; // возвращаем вложенную функцию
+
+  return (int y) => x + y; // возвращаем анонимную функцию
+
+
 }
