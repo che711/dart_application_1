@@ -40,6 +40,7 @@ void main() {
   print('myIterable2.length: $mylength');
 
   // other important methods on Iterable: map, where,expan, contains,forEach, reduce, fold
+  // ignore: unused_element
   Iterable<int> hundredSquare() sync* {
     for (int i = 1; i < 100; i++) {
       yield i * i;
