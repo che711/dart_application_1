@@ -3,11 +3,14 @@ void main() {
   // Error
 
   try {
-    var list = [double.parse('3.14'), 2, 3];
-    print ('Result: $list');
+    var list = [double.parse('3,14'), '3', 3];
+    print ('Result: ${list[7]}');
+  } on RangeError {
+    print('The error');
   } catch (e) {
     print('Error: $e');
   }
+  
 
 
 }
