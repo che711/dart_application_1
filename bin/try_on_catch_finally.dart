@@ -4,15 +4,13 @@ void main() {
 
   try {
     var list = [double.parse('3,14'), '3', 3];
-    print ('Result: ${list[7]}');
+    print('Result: $list');
   } on RangeError {
     print('The error');
-  } catch (e) {
+  } catch (e, s) {
+    print('Stack trace: $s');  // added stack trace
     print('Error: $e');
-  }finally {
+  } finally {
     print('This is Finally and is always executed');
   }
-  
-
-
 }
