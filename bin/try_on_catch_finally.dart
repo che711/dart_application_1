@@ -9,6 +9,8 @@ void main() {
     print('The error');
   } catch (e) {
     print('Error: $e');
+  }finally {
+    print('This is Finally and is always executed');
   }
   
 
