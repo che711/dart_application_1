@@ -3,7 +3,7 @@ void main() {
   // Error
 
   try {
-    var list = [double.parse('3.14'), '3', 3];
+    var list = [double.parse('3,14'), '3', 3];
     print('Result: $list');
   } on RangeError {
     print('The error');
