@@ -32,6 +32,12 @@ void main() {
   final volvoCar = Car.volvo();
   print(volvoCar);
   print('Printed Car.volvo above');
+  print('');
+
+  final bmwCar = Car.bmw();
+  print(bmwCar);
+  print('Printed Car.bmw above');
+
 }
 
 // класс Car должен выше или ниже метода main
@@ -52,6 +58,8 @@ class Car {
     model = 'Volvo';
   }
 
+  Car.bmw() : this(vin: 300, model: 'BMW');
+  
   String printNewCar() {
     return "My new car has vin: $vin, and model: $model";
   }
