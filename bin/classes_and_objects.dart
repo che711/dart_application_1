@@ -4,14 +4,17 @@ void main() {
 
   // после создания конструктора класса Car
   // нужно добавить объекты в ()
-  final myCar = Car(vin: 503, model: 'BMW'); 
+  final myCar = Car(vin: 503, model: 'BMW');
   myCar.vin = 503;
   myCar.model = 'BMW';
 
   print(myCar);
   print('');
 
-  final myCar1 = Car(vin: 3242, model: 'Audi') // после добавления конструктора обязтель добавить параметры в ()
+  final myCar1 = Car(
+      vin: 3242,
+      model:
+          'Audi') // после добавления конструктора обязтель добавить параметры в ()
     ..vin = 3242
     ..model = 'Audi';
 
@@ -24,6 +27,11 @@ void main() {
   print(anotherCar.vin);
   anotherCar.vin = 000;
   print(anotherCar.vin);
+  print('');
+
+  final volvoCar = Car.volvo();
+  print(volvoCar);
+  print('Printed Car.volvo above');
 }
 
 // класс Car должен выше или ниже метода main
@@ -36,6 +44,12 @@ class Car {
   Car({required this.vin, this.model = 'unknown'}) {
     // this.vin = vin;
     // this.model = model;
+  }
+
+  // создаем именнованный конструктор
+  Car.volvo() {
+    vin = 200;
+    model = 'Volvo';
   }
 
   String printNewCar() {
