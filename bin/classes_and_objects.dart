@@ -1,3 +1,5 @@
+import 'package:dart_application_1/car.dart';
+
 void main() {
   // в Dart можно создавать множество разнообразных
   // объектов с помощью одного класса
@@ -5,8 +7,8 @@ void main() {
   // после создания конструктора класса Car
   // нужно добавить объекты в ()
   final myCar = Car(vin: 503, model: 'BMW');
-  myCar.vin = 503;
-  myCar.model = 'BMW';
+  // myCar.vin = 503;
+  // myCar.model = 'BMW';
 
   print(myCar);
   print('');
@@ -37,7 +39,6 @@ void main() {
   final bmwCar = Car.bmw();
   print(bmwCar);
   print('Printed Car.bmw above');
-
 }
 
 // класс Car должен выше или ниже метода main
@@ -47,9 +48,10 @@ class Car {
   String model = '';
 
   // создаем конструктор класса Car
-  Car({required this.vin, this.model = 'unknown'}) {
-    // this.vin = vin;
-    // this.model = model;
+  Car({required int vin, String model = 'unknown'})
+      : vin = vin,
+        model = model {
+    print('Car: $vin and $model');
   }
 
   // создаем именнованный конструктор
@@ -59,7 +61,7 @@ class Car {
   }
 
   Car.bmw() : this(vin: 300, model: 'BMW');
-  
+
   String printNewCar() {
     return "My new car has vin: $vin, and model: $model";
   }
