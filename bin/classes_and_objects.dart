@@ -17,6 +17,13 @@ void main() {
   print(renaultCar);
   print('');
 
+  final mapCar = {
+    'vin': 700,
+    'model': 'Mercedes',
+  };
+  final mersedesCar = Car.fromJson(mapCar);
+  print(mersedesCar);
+
 }
 
 // класс Car может быть объявлен здесь
@@ -31,6 +38,11 @@ class Car {
     return Car(vin: 200, model: 'Renault');
   }
 
+  factory Car.fromJson(Map<String, dynamic> json) {
+    final carVin = json['vin'] as int;
+    final carModel = json['model'] as String;
+    return Car(vin: carVin, model: carModel);
+  }
 
   String printNewCar() {
     return "My new car has vin: $_vin, and model: $_model";
