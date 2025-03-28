@@ -6,43 +6,38 @@ void main() {
 
   // после создания конструктора класса Car
   // нужно добавить объекты в ()
-  const myCar = Car(vin: 503, model: 'BMW');
-  // myCar.vin = 503;
+  final myCar = Car(vin: 503, model: 'BMW');
+  // myCar.vin = 503; // Эти строки излишни, так как значения передаются в конструктор
   // myCar.model = 'BMW';
 
   print(myCar);
   print('');
 
-  const anotherCar = myCar;
-  print(anotherCar.vin);
-  anotherCar.vin = 000;
-  print(anotherCar.vin);
+  final renaultCar = Car.renault();
+  print(renaultCar);
   print('');
 
-  const bmwCar = Car.bmw();
-  print(bmwCar);
-  print('Printed Car.bmw above');
 }
 
-// класс Car должен выше или ниже метода main
+// класс Car может быть объявлен здесь
 
 class Car {
-  final int? vin;
-  final String model;
+  final int _vin;
+  final String _model;
 
-  // создаем конструктор класса Car
-  Car({required int vin, String model = 'unknown'}) : vin = vin, model = model {
-    print('Car: $vin and $model');
+  Car({required int vin, required String model}) : _vin = vin, _model = model;
+
+  factory Car.renault() {
+    return Car(vin: 200, model: 'Renault');
   }
 
-  const Car.bmw() : this(vin: 300, model: 'BMW');
 
   String printNewCar() {
-    return "My new car has vin: $vin, and model: $model";
+    return "My new car has vin: $_vin, and model: $_model";
   }
 
   @override
   String toString() {
-    return "Car's vin: $vin, \nCar model: $model";
+    return "Car's vin: $_vin, \nCar model: $_model";
   }
 }
