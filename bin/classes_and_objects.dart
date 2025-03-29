@@ -7,67 +7,49 @@ void main() {
   // после создания конструктора класса Car
   // нужно добавить объекты в ()
   final myCar = Car(vin: 503, model: 'BMW');
-  // myCar.vin = 503;
+  // myCar.vin = 503; // Эти строки излишни, так как значения передаются в конструктор
   // myCar.model = 'BMW';
 
   print(myCar);
   print('');
 
-  final myCar1 = Car(
-      vin: 3242,
-      model:
-          'Audi') // после добавления конструктора обязтель добавить параметры в ()
-    ..vin = 3242
-    ..model = 'Audi';
-
-  // myCar1.vin = 3241;
-  // myCar1.model = 'Renault';
-  print(myCar1.printNewCar());
+  final renaultCar = Car.renault();
+  print(renaultCar);
   print('');
 
-  final anotherCar = myCar;
-  print(anotherCar.vin);
-  anotherCar.vin = 000;
-  print(anotherCar.vin);
-  print('');
+  final mapCar = {
+    'vin': 700,
+    'model': 'Mercedes',
+  };
+  final mersedesCar = Car.fromJson(mapCar);
+  print(mersedesCar);
 
-  final volvoCar = Car.volvo();
-  print(volvoCar);
-  print('Printed Car.volvo above');
-  print('');
-
-  final bmwCar = Car.bmw();
-  print(bmwCar);
-  print('Printed Car.bmw above');
 }
 
-// класс Car должен выше или ниже метода main
+// класс Car может быть объявлен здесь
 
 class Car {
-  int? vin = 0;
-  String model = '';
+  final int _vin;
+  final String _model;
 
-  // создаем конструктор класса Car
-  Car({required int vin, String model = 'unknown'})
-      : vin = vin,
-        model = model {
-    print('Car: $vin and $model');
+  Car({required int vin, required String model}) : _vin = vin, _model = model;
+
+  factory Car.renault() {
+    return Car(vin: 200, model: 'Renault');
   }
 
-  // создаем именнованный конструктор
-  Car.volvo() {
-    vin = 200;
-    model = 'Volvo';
+  factory Car.fromJson(Map<String, dynamic> json) {
+    final carVin = json['vin'] as int;
+    final carModel = json['model'] as String;
+    return Car(vin: carVin, model: carModel);
   }
-
-  Car.bmw() : this(vin: 300, model: 'BMW');
 
   String printNewCar() {
-    return "My new car has vin: $vin, and model: $model";
+    return "My new car has vin: $_vin, and model: $_model";
   }
 
   @override
   String toString() {
-    return "Car's vin: $vin, \nCar model: $model";
+    return "Car's vin: $_vin, \nCar model: $_model";
   }
 }
