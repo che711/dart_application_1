@@ -1,4 +1,3 @@
-
 void main() {
   final myCar = Car(503, 'BMW');
 
@@ -7,6 +6,7 @@ void main() {
   // print(myCar); // Выводим информацию об автомобиле
   print('');
 
+  Car.setWheels(3);
 }
 
 // класс Car может быть объявлен здесь
@@ -14,17 +14,26 @@ void main() {
 class Car {
   int vin;
   String model;
-  static int numOfWheels = 3;
+  static int numOfWheels = 4;
 
   void chceckMove() {
-    if (numOfWheels < 4) {
-      print('Car is broken');
+    numOfWheels < 4 ? print('Your car is brokent') : print('Your car is OK');
+  }
+
+  static double time(int dist, double speed) => dist / speed;
+
+  static void setWheels(int value) {
+    if (value == 4) {
+      numOfWheels = value;
     } else {
-      print('Car is OK');
+      print('Please, set 4 wheels');
     }
   }
 
-  Car(this.vin, this.model);
+  Car(this.vin, this.model) {
+    var t = time(500, 80);
+    print('Time: $t');
+  }
 
   @override
   String toString() {
