@@ -11,10 +11,14 @@ void main() {
     'Ivan',
     'Doe',
   );
+  final vasya = StudentSwimmer('Vasya', 'Sidorov');
+
   konstantin.gitFullName();
-  ivan.grabed.add(5);
+  ivan.grades.add(5);
   ivan.gitFullName();
 
+  vasya.grades.add(3);
+  vasya.gitFullName();
 }
 
 class Person {
@@ -26,13 +30,25 @@ class Person {
 }
 
 class Student extends Person {
-  List<int> grabed = [];
+  List<int> grades = [];
 
   Student(super.name, super.surname);
 
   @override
   void gitFullName() {
     super.gitFullName();
-    print('Student has next grabes: $grabed');
+    print('Student has next grabes: $grades');
+  }
+}
+
+class StudentSwimmer extends Student {
+  StudentSwimmer(super.name, super.surname);
+
+  @override
+  void gitFullName() {
+    super.gitFullName();
+    grades.every((grade) => grade != 2)
+        ? print('You can swim')
+        : print("Can't swim");
   }
 }
