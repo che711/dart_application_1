@@ -5,11 +5,21 @@
 // Иерархическое наследование - это когда один класс наследует от другого класса, который сам наследует от нескольких классов (ClassA -> ClassС, ClassA)
 // Множественное наследование - это когда один класс наследует от нескольких классов (ClassA -> ClassB + ClassC)
 
+import 'dart:io';
+
 void main() {
   final konstantin = Person('John', 'Doe');
   final ivan = Student('Ivan', 'Doe');
   final vasya = StudentSwimmer('Vasya', 'Sidorov');
   final misha = StudentAthlet('Misha', 'Ivanov');
+
+  final someStudent = SomeStudent();
+  // someStudent.grades.add(5);
+  // someStudent.getFullName();
+  // someStudent.name = 'Jonny';
+  // someStudent.surname = 'Snow';
+  someStudent.getFullName();
+  print('');
 
   konstantin.getFullName();
   ivan.grades.add(5);
@@ -55,4 +65,20 @@ class StudentSwimmer extends Student {
 class StudentAthlet extends Student {
   StudentAthlet(super.name, super.surname);
   static const minPracticeTime = 1;
+}
+
+class SomeStudent extends StudentSwimmer {
+  // SomeStudent(super.name, super.surname);
+
+  @override
+  List<int> grades = [4];
+
+  @override
+  String name = 'MyName';
+
+  @override
+  String surname = 'MySurname';
+
+  @override
+  void getFullName()  => print('$surname $name');
 }
