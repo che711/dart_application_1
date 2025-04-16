@@ -7,14 +7,17 @@
 
 void main() {
   final konstantin = Person('John', 'Doe');
-  final ivan = Student(
-    'Ivan',
-    'Doe',
-  );
-  konstantin.gitFullName();
-  ivan.grabed.add(5);
-  ivan.gitFullName();
+  final ivan = Student('Ivan', 'Doe');
+  final vasya = StudentSwimmer('Vasya', 'Sidorov');
+  final misha = StudentAthlet('Misha', 'Ivanov');
 
+  konstantin.getFullName();
+  ivan.grades.add(5);
+  ivan.getFullName();
+
+  vasya.grades.add(3);
+  vasya.getFullName();
+  misha.getFullName();
 }
 
 class Person {
@@ -22,17 +25,34 @@ class Person {
   String surname;
 
   Person(this.name, this.surname);
-  void gitFullName() => print('$name $surname');
+  void getFullName() => print('$name $surname');
 }
 
 class Student extends Person {
-  List<int> grabed = [];
+  List<int> grades = [];
 
   Student(super.name, super.surname);
 
   @override
-  void gitFullName() {
-    super.gitFullName();
-    print('Student has next grabes: $grabed');
+  void getFullName() {
+    super.getFullName();
+    print('Student has next grabes: $grades');
   }
+}
+
+class StudentSwimmer extends Student {
+  StudentSwimmer(super.name, super.surname);
+
+  @override
+  void getFullName() {
+    super.getFullName();
+    grades.every((grade) => grade != 2)
+        ? print('You can swim')
+        : print("Can't swim");
+  }
+}
+
+class StudentAthlet extends Student {
+  StudentAthlet(super.name, super.surname);
+  static const minPracticeTime = 1;
 }
