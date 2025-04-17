@@ -13,7 +13,7 @@ void main() {
   final vasya = StudentSwimmer('Vasya', 'Sidorov');
   final misha = StudentAthlet('Misha', 'Ivanov');
 
-  final someStudent = SomeStudent();
+  final someStudent = SomeStudent('User', 'Test');
   // someStudent.grades.add(5);
   // someStudent.getFullName();
   // someStudent.name = 'Jonny';
@@ -68,7 +68,7 @@ class StudentAthlet extends Student {
 }
 
 class SomeStudent extends StudentSwimmer {
-  // SomeStudent(super.name, super.surname);
+  SomeStudent(super.name, super.surname);
 
   @override
   List<int> grades = [4];
