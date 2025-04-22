@@ -1,5 +1,5 @@
 void main() {
-final konstantin = Person('John', 'Doe');
+  final konstantin = Person('John', 'Doe');
   final ivan = Student('Ivan', 'Doe');
   final vasya = StudentSwimmer('Vasya', 'Sidorov');
   final misha = StudentAthlet('Misha', 'Ivanov');
@@ -16,7 +16,11 @@ final konstantin = Person('John', 'Doe');
   misha.course = 'Dart';
   vasya.study();
   misha.study();
+  misha.whoIam();
   print('');
+
+  print(misha.passText);
+  print(misha.hidePass);
 
   konstantin.getFullName();
   ivan.grades.add(5);
@@ -44,7 +48,7 @@ class Student extends Person {
   void getFullName() {
     super.getFullName();
     print('Student has next grabes: $grades');
-  }   
+  }
 }
 
 mixin Learner {
@@ -67,4 +71,14 @@ class StudentSwimmer extends Student with Learner {
 class StudentAthlet extends Student with Learner {
   StudentAthlet(super.name, super.surname);
   static const minPracticeTime = 1;
+
+  String _passText = 'pass123';
+  String get passText => _passText;
+  String get hidePass {
+    final length = _passText.length;
+    return '*' * length;
+  }
+
+  @override
+  void whoIam() => print("I'm a student Athlet");
 }
