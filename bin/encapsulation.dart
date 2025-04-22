@@ -1,14 +1,5 @@
-// Дерево наследования
-// Типы наследования: простое, множественное, многоуровневое, иерархическое
-// Простое наследование - это когда один класс наследует от другого класса (ClassA -> ClassB)
-// Многоуровневое наследование - это когда один класс наследует от другого класса, который сам наследует от другого класса (ClassA -> ClassB -> ClassC)
-// Иерархическое наследование - это когда один класс наследует от другого класса, который сам наследует от нескольких классов (ClassA -> ClassС, ClassA)
-// Множественное наследование - это когда один класс наследует от нескольких классов (ClassA -> ClassB + ClassC)
-
-import 'dart:io';
-
 void main() {
-  final konstantin = Person('John', 'Doe');
+final konstantin = Person('John', 'Doe');
   final ivan = Student('Ivan', 'Doe');
   final vasya = StudentSwimmer('Vasya', 'Sidorov');
   final misha = StudentAthlet('Misha', 'Ivanov');
@@ -77,19 +68,3 @@ class StudentAthlet extends Student with Learner {
   StudentAthlet(super.name, super.surname);
   static const minPracticeTime = 1;
 }
-
-// class SomeStudent extends StudentSwimmer {
-//   SomeStudent(super.name, super.surname);
-
-//   @override
-//   List<int> grades = [4];
-
-//   @override
-//   String name = 'MyName';
-
-//   @override
-//   String surname = 'MySurname';
-
-//   @override
-//   void getFullName() => print('$surname $name');
-// }
