@@ -1,12 +1,3 @@
-// Дерево наследования
-// Типы наследования: простое, множественное, многоуровневое, иерархическое
-// Простое наследование - это когда один класс наследует от другого класса (ClassA -> ClassB)
-// Многоуровневое наследование - это когда один класс наследует от другого класса, который сам наследует от другого класса (ClassA -> ClassB -> ClassC)
-// Иерархическое наследование - это когда один класс наследует от другого класса, который сам наследует от нескольких классов (ClassA -> ClassС, ClassA)
-// Множественное наследование - это когда один класс наследует от нескольких классов (ClassA -> ClassB + ClassC)
-
-import 'dart:io';
-
 void main() {
   final konstantin = Person('John', 'Doe');
   final ivan = Student('Ivan', 'Doe');
@@ -25,7 +16,11 @@ void main() {
   misha.course = 'Dart';
   vasya.study();
   misha.study();
+  misha.whoIam();
   print('');
+
+  print(misha.passText);
+  print(misha.hidePass);
 
   konstantin.getFullName();
   ivan.grades.add(5);
@@ -53,7 +48,7 @@ class Student extends Person {
   void getFullName() {
     super.getFullName();
     print('Student has next grabes: $grades');
-  }   
+  }
 }
 
 mixin Learner {
@@ -76,20 +71,14 @@ class StudentSwimmer extends Student with Learner {
 class StudentAthlet extends Student with Learner {
   StudentAthlet(super.name, super.surname);
   static const minPracticeTime = 1;
+
+  String _passText = 'pass123';
+  String get passText => _passText;
+  String get hidePass {
+    final length = _passText.length;
+    return '*' * length;
+  }
+
+  @override
+  void whoIam() => print("I'm a student Athlet");
 }
-
-// class SomeStudent extends StudentSwimmer {
-//   SomeStudent(super.name, super.surname);
-
-//   @override
-//   List<int> grades = [4];
-
-//   @override
-//   String name = 'MyName';
-
-//   @override
-//   String surname = 'MySurname';
-
-//   @override
-//   void getFullName() => print('$surname $name');
-// }
