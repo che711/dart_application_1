@@ -19,6 +19,7 @@ void main() {
   misha.whoIam();
   print('');
 
+  misha.passText = '12345';
   print(misha.passText);
   print(misha.hidePass);
 
@@ -77,6 +78,14 @@ class StudentAthlet extends Student with Learner {
   String get hidePass {
     final length = _passText.length;
     return '*' * length;
+  }
+
+  set passText(String text) {
+    if (text.length < 6) {
+      print('Password must have 6 or more characters');
+      return;
+    }
+    _passText = text;
   }
 
   @override
