@@ -73,7 +73,7 @@ class StudentAthlet extends Student with Learner {
   StudentAthlet(super.name, super.surname);
   static const minPracticeTime = 1;
 
-  String _passText = 'pass123';
+  final String _passText = 'pass123';
   String get passText => _passText;
   String get hidePass {
     final length = _passText.length;

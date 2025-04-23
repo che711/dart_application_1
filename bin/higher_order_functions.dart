@@ -15,12 +15,12 @@ void main() {
 
   const listNumbers = [1, 2, 3, 4, 5, 6];
 
-  final doubleElement = (number) => print(2 * number);
+  doubleElement(number) => print(2 * number);
   listNumbers.forEach(doubleElement);
 
-  listNumbers.forEach((int number) {
+  for (var number in listNumbers) {
     print(2 * number);
-  });
+  }
   print('');
 
   // map
