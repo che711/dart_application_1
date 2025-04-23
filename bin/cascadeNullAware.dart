@@ -3,6 +3,6 @@
 // ?..  cascade null-aware operator
 
 void main() {
-  print('hello, there!')
+  print('hello, there!');
 }
 
