@@ -85,7 +85,7 @@ class StudentAthlet extends Student with Learner {
       print('Password must have 6 or more characters');
       return;
     }
-    _passText = text;
+    // _passText = text;
   }
 
   @override
