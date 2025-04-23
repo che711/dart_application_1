@@ -5,7 +5,6 @@
 * объявленные во всех функциях выше нее
 * topLevelVariable - глобальная переменная доступна везде
 */
-library;
 
 var topLevelVariable = 'top level variable';
 
