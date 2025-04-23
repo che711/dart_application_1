@@ -1,4 +1,3 @@
-import 'package:dart_application_1/car.dart';
 
 void main() {
   // в Dart можно создавать множество разнообразных

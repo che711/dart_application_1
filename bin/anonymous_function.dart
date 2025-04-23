@@ -6,7 +6,7 @@ void main() {
   // };
 
   // Короткая запись анонимной функции
-  Function addTwoNumbers = (int a, int b) => print(a + b);
+  addTwoNumbers(int a, int b) => print(a + b);
 
   print(addTwoNumbers(2, 5));
 
