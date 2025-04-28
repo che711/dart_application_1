@@ -4,6 +4,5 @@
 
 void main() {
   List<String> nullableValues = ['Warsaw', 'LA', 'NY'];
+  print(nullableValues);
 }
-
-
