@@ -88,6 +88,5 @@ class StudentAthlet extends Student with Learner {
     // _passText = text;
   }
 
-  @override
   void whoIam() => print("I'm a student Athlet");
 }
