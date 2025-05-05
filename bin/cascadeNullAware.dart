@@ -5,7 +5,7 @@
 void main() {
   Path? path = Path();
   path
-  ?..moveTo(0, 0)
+  ..moveTo(0, 0)
   ..lineTo(0, 2)
   ..lineTo(2, 2);
 }
