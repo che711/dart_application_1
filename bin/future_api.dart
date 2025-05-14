@@ -18,12 +18,12 @@ void main() {
 
   print(myFuture);
 
-  firstName().then((firstName(){
-    return lastName().then((lastName){
-      var fullName = '$firstName $lastName';
-      return sayHello(fullName);
-    });
-  }).then((value) => print(value));
+  // firstName().then((firstName(){
+  //   return lastName().then(lastName){
+  //     var fullName = '$firstName $lastName';
+  //     return sayHello(fullName);
+  //   });
+  // }).then((value) => print(value));
 
   print('Завершение работы функции main()');
 }
