@@ -12,11 +12,24 @@ void main() {
 
   stream.listen((data) {
     print('Получено: $data');
+  }, onDone: () {
+    print('Все события завершены');
+  }, onError: (Object error) {
+    print(error);
   });
 
   Future.delayed(Duration(seconds: 5), () {
+    print('Приостановка потока');
+    subscription?.pause();
+  });
+
+  Future.delayed(Duration(seconds: 10), () {
+    print('Возобновление потока');
+    subscription?.resume();
+  });
+
+  Future.delayed(Duration(seconds: 15), () {
     print('Отписка от потока');
     subscription?.cancel();
   });
 }
-
