@@ -9,12 +9,32 @@ StreamSubscription<int>? subscription;
 
 void main() async {
   // await readStreamAsyncForLoop();
-  final result = asyncGenerator();
-  result.listen(
-    (event){
-    print(event);
-  },
-  );
+  // final result = asyncGenerator();
+  // result.listen(
+  //   (event){
+  //   print(event);
+  // },
+  // );
+  usignStreamController();
+}
+
+void usignStreamController() {
+  final controller = StreamController();
+  final stream = controller.stream;
+  final sink = controller.sink;
+
+  stream.listen((data) {
+    print('Данные получены: $data');
+  }, onDone: () {
+    print('Sink закрыт');
+  }, onError: (Object error) {
+    print(error);
+  });
+  sink.add('Виноград');
+  sink.add('Виноград');
+  sink.add('Виноград');
+  sink.addError(Exception('Вишня'));
+  sink.close();
 }
 
 Stream<int> asyncGenerator() async* {
