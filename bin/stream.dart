@@ -8,7 +8,19 @@ import 'dart:async';
 StreamSubscription<int>? subscription;
 
 void main() async {
-  await readStreamAsyncForLoop();
+  // await readStreamAsyncForLoop();
+  final result = asyncGenerator();
+  result.listen(
+    (event){
+    print(event);
+  },
+  );
+}
+
+Stream<int> asyncGenerator() async* {
+  for (int i = 1; i <= 100; i++) {
+    yield i;
+  }
 }
 
 Future<void> readStreamAsyncForLoop() async {
