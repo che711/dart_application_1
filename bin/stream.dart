@@ -7,7 +7,19 @@ import 'dart:async';
 
 StreamSubscription<int>? subscription;
 
-void main() {
+void main() async {
+  await readStreamAsyncForLoop();
+}
+
+Future<void> readStreamAsyncForLoop() async {
+  final stream = Stream.fromIterable([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+  await for (var data in stream) {
+    print('Получено: $data');
+  }
+}
+
+void readStream() {
   final stream = Stream.periodic(Duration(seconds: 1), (tick) => tick);
 
   stream.listen((data) {
